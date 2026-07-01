@@ -13,13 +13,13 @@
       "thanks"
     ],
     "short": "The organization that transformed a fresher into the professional I am today.",
-    "message": "Dear Intellipaat,\n\nEvery journey has a beginning, and mine began here on 31st July 2023. I walked into this organization with excitement, curiosity, and honestly, very little idea about what the corporate world looked like.\n\nUI/UX became the very first technology I learned here. I had absolutely no prior knowledge of it, but this organization gave me the opportunity to start somewhere. That first opportunity eventually became the foundation of everything that followed.\n\nSoon, my journey expanded into DevOps, Cloud, AWS, Linux, Docker, Terraform, CI/CD, Python, HTML, CSS, JavaScript and many other technologies. Every project, every responsibility, every challenge made me grow—not only technically but personally.\n\nApart from technology, Intellipaat gave me opportunities that no classroom ever could. I handled operational work, worked with IIT Jammu, VNIT, NIT Surathkal and several prestigious institutes, handled student escalations, conducted one-on-one mentoring sessions, resolved technical tickets, interacted directly with learners, delivered presentations, managed teams, and eventually got the opportunity to become a Team Lead.\n\nThe confidence I carry today, the leadership I have developed, and the way I approach problems are all deeply influenced by my journey here.\n\nThank you for believing in me, trusting me with responsibilities, allowing me to make mistakes, and helping me become a better professional every single day.\n\nWhatever I am today, a significant part of my journey will always belong to Intellipaat.\n\nThank you for giving me my first corporate home."
+    "message": "Dear Intellipaat,\n\nEvery journey has a beginning, and mine began here on 31st July 2023. I walked into this organization with excitement, curiosity, and honestly, very little idea about what the corporate world looked like.\n\nUI/UX became the very first technology I learned here. I had absolutely no prior knowledge of it, but this organization gave me the opportunity to start somewhere. That first opportunity eventually became the foundation of everything that followed.\n\nSoon, my journey expanded into DevOps, Cloud, AWS, Linux, AWS-DevOps, DevSecOps, Python, HTML, CSS, JavaScript and many other technologies. Every project, every responsibility, every challenge made me grow—not only technically but personally.\n\nApart from technology, Intellipaat gave me opportunities that no classroom ever could. I handled operational work, worked with IIT Jammu, VNIT, NIT Sikkim and several prestigious institutes, handled student escalations, conducted one-on-one mentoring sessions, resolved technical tickets, interacted directly with learners, delivered presentations, managed teams, and eventually got the opportunity to become a Team Lead.\n\nThe confidence I carry today, the leadership I have developed, and the way I approach problems are all deeply influenced by my journey here.\n\nThank you for believing in me, trusting me with responsibilities, allowing me to make mistakes, and helping me become a better professional every single day.\n\nWhatever I am today, a significant part of my journey will always belong to Intellipaat.\n\nThank you for giving me my first corporate home."
   },
 
   {
     "id": 2,
-    "name": "Hemanth Sir",
-    "team": "UI/UX",
+    "name": "Hemant Sir",
+    "team": "Technical",
     "role": "Mentor",
     "search": [
       "hemanth",
@@ -31,13 +31,13 @@
       "design"
     ],
     "short": "The person who introduced me to professional quality and perfection.",
-    "message": "Dear Hemanth Sir,\n\nOur journey started around 29th September 2023 during the UI/UX course revamp. That was the first time I had the opportunity to work closely with you.\n\nTo be very honest, I had never seriously prepared professional presentations before. The level of precision, quality, storytelling and learner-centric thinking that you expected completely changed the way I looked at creating content.\n\nEvery review, every feedback and every discussion taught me something valuable.\n\nBeyond presentations, I also learned from observing how you communicate with learners, interact during hackathons, and represent yourself professionally. Those experiences became lessons that extended far beyond UI/UX.\n\nMany people may know you professionally, but I had the opportunity to know you personally as well. The conversations we had, the advice you shared, and the perspective you gave me about work and life will always stay with me.\n\nThank you for every lesson, every correction, every opportunity and every word of encouragement.\n\nYou played an important role in shaping the professional I became."
+    "message": "Dear Hemanth Sir,\n\nOur journey started around 29th September 2023 during the UI/UX course revamp. That was the first time I had the opportunity to work closely with you.\n\nTo be very honest, I had never seriously prepared professional presentations before. The level of precision, quality, storytelling and learner-centric thinking that you expected completely changed the way I looked at creating content.\n\nEvery review, every feedback and every discussion taught me something valuable.\n\nBeyond presentations, I also learned from observing how you communicate with learners, interact during hackathons, and represent yourself professionally. Those experiences became lessons that extended far beyond UI/UX.\n\nAlso I had the opportunity to know you personally as well. The conversations we had, the advice you shared, and the perspective you gave me about work and life will always stay with me.\n\nThank you for every lesson, every correction, every opportunity and every word of encouragement.\n\nYou played an important role in shaping the professional I became."
   },
 
   {
     "id": 3,
     "name": "Akshay Sir",
-    "team": "Management",
+    "team": "Manager",
     "role": "Team Lead",
     "search": [
       "akshay",
@@ -55,7 +55,7 @@
   {
     "id": 4,
     "name": "Harshit Bhaiya",
-    "team": "Operations",
+    "team": "Technical",
     "role": "Senior",
     "search": [
       "harshit",
@@ -66,7 +66,7 @@
       "mock",
       "customer"
     ],
-    "short": "From 'Sir' to 'Bhaiya'—thank you for teaching me operations and ownership.",
+    "short": "From 'Sir' to 'Bhaiya': Thank you for teaching me operations and ownership.",
     "message": "Dear Harshit Bhaiya,\n\nI still remember seeing you on my joining day and honestly thinking, 'Who is this serious person?' I was genuinely a little scared at first.\n\nOver time, that 'Sir' naturally became 'Bhaiya', and that itself reflects how much our professional relationship evolved.\n\nInitially we didn't work together very often, but when I started handling VNIT, IIT Jammu, NIT Sikkim and various operational responsibilities, I got the opportunity to learn from you.\n\nYou taught me how to handle customers, operational challenges, escalations, refunds and difficult situations with confidence.\n\nI also remember preparing for Python mocks where your guidance gave me clarity about what was expected.\n\nThank you for every lesson, every suggestion and every piece of guidance.\n\nI'm truly grateful for everything I learned from you."
   }
   ,
@@ -87,12 +87,12 @@
     "uiux"
   ],
   "short": "People may leave an organization, but they never leave the memories they create.",
-  "message": "Before I start thanking the people who are currently at Intellipaat, I want to sincerely thank a few people who were a very important part of my journey but have already moved on to new opportunities. Cyan Bhaiya, Chinnappa, Harsh, Anmol and Animesh—thank you. You all played a significant role in teaching me UI/UX, DevOps and many of the technical foundations that I still carry today. Even though you are no longer part of Intellipaat, your contribution to my journey will always remain a part of my story. Thank you for every lesson, every discussion and every piece of guidance."
+  "message": "Before I start thanking the people who are currently at Intellipaat, I want to sincerely thank a few people who were a very important part of my journey but have already moved on to new opportunities. Syan Bhaiya, Chinnappa, Harsh, Anmol and Animesh: Thank You. You all played a significant role in teaching me UI/UX, DevOps and many of the technical foundations that I still carry today. Even though you are no longer part of Intellipaat, your contribution to my journey will always remain a part of my story. Thank you for every lesson, every discussion and every piece of guidance."
 },
 {
   "id": 6,
   "name": "Keshav Bhaiya",
-  "team": "Management",
+  "team": "Technical",
   "role": "Former Team Lead",
   "search": [
     "keshav",
@@ -117,7 +117,7 @@
     "mentor"
   ],
   "short": "A leader who perfectly balanced discipline with kindness.",
-  "message": "Dear Deep, although we were not directly connected through the same reporting structure, we always belonged to the same Cloud family. I truly appreciate the bond we shared. The way you managed the team impressed me a lot—you always knew when to be strict and when to be supportive. That balance is something I genuinely admire. Thank you for always being approachable and for every interaction we had. Wishing you all the very best."
+  "message": "Dear Deep, Although we were not directly connected through the same domain, We always belonged to the same Cloud family. I truly appreciate the bond we shared. The way you managed the team impressed me a lot ,you always knew when to be strict and when to be supportive. That balance is something I genuinely admire. Thank you for always being approachable and for every interaction we had. Wishing you all the very best."
 },
 {
   "id": 8,
@@ -138,8 +138,8 @@
     "ashish",
     "team"
   ],
-  "short": "Not just a team—my family, my biggest strength and my proudest achievement.",
-  "message": "Dear DevOps Team,\n\nI honestly don't know where to begin because no paragraph will ever be enough to describe what you all mean to me.\n\nThank you Uday, Rishabh, Anushka, Akshat, Gaurav, Aditya, Ayushi and everyone who has been part of this journey. I also want to thank Muskan, Ashish and everyone who has moved on from the organization.\n\nYou all didn't just help me become a better Team Lead—you helped me become a better person.\n\nWhether it was working together, solving issues, sharing memes, laughing over random conversations, discussing personal problems, going out together or simply spending everyday moments in the office, every memory is special.\n\nSome of you called me 'Didi', some called me 'Ma'am', but every single one of you earned a very special place in my heart.\n\nI know every one of you has tremendous potential. Continue working hard, keep learning and make sure people continue recognizing the DevOps team for the amazing work you all do.\n\nIf there is one thing I want from all of you, it is this—keep making yourselves proud and somewhere, make your Team Lead proud too.\n\nI'm going to miss each one of you far more than words can express.\n\nThank you for being my team, my support system and my family."
+  "short": "Not just a team ,My Family, My Biggest Strength and My Proudest Achievement.",
+  "message": "Dear DevOps Team,\n\nI honestly don't know where to begin because no paragraph will ever be enough to describe what you all mean to me.\n\nThank you Uday, Rishabh, Anushka, Akshat, Gaurav, Aditya, Ayushi and everyone who has been part of this journey. I also want to thank Muskan, Ashesh and everyone who has moved on from the organization.\n\nYou all didn't just help me become a better Team Lead you helped me become a better person.\n\nWhether it was working together, solving issues, sharing memes, laughing over random conversations, discussing personal problems, going out together or simply spending everyday moments in the office, every memory is special.\n\nSome of you called me 'Didi', some called me 'Ma'am', but every single one of you earned a very special place in my heart.\n\nI know every one of you has tremendous potential. Continue working hard, keep learning and make sure people continue recognizing the DevOps team for the amazing work you all do.\n\nIf there is one thing I want from all of you, it is this—keep making yourselves proud and somewhere, make your Team Lead proud too.\n\nI'm going to miss each one of you far more than words can express.\n\nThank you for being my team, my support system and my family."
 },
 {
   "id": 9,
@@ -201,7 +201,7 @@
   "role": "Technical Trainer",
   "search": ["bibek", "python"],
   "short": "A wonderful colleague and an even better person.",
-  "message": "Dear Vivek,\n\nThank you for being such an amazing colleague. Not only professionally but personally as well, our interactions have always been enjoyable. I truly appreciate your support, your positive attitude and the respect you always showed. Wishing you happiness, growth and success in everything you do."
+  "message": "Dear Bibek,\n\nThank you for being such an amazing colleague. Not only professionally but personally as well, our interactions have always been enjoyable " saying Helllloooo Ma'am. I truly appreciate your support, your positive attitude and the respect you always showed. Wishing you happiness, growth and success in everything you do."
 },
 {
   "id": 15,
@@ -219,7 +219,7 @@
   "role": "Technical Trainer",
   "search": ["mounika", "python"],
   "short": "Thank you for always being supportive.",
-  "message": "Dear Monica,\n\nThank you for every bit of support throughout our journey together. Whenever work came your way, you handled it sincerely. It was wonderful working with you. I wish you endless growth and happiness in your future."
+  "message": "Dear Mounika,\n\nThank you for every bit of support throughout our journey together. Whenever work came your way, you handled it sincerely. It was wonderful working with you. I wish you endless growth and happiness in your future."
 },
 {
   "id": 17,
@@ -232,12 +232,12 @@
 },
 {
   "id": 18,
-  "name": "Rupali",
+  "name": "Roopali",
   "team": "Python",
   "role": "Technical Trainer",
-  "search": ["rupali", "python"],
+  "search": ["roopali", "python"],
   "short": "Thank you for your dedication and positivity.",
-  "message": "Dear Rupali,\n\nThank you for every contribution you made throughout our journey together. Your willingness to support whenever required never went unnoticed. Wishing you a future filled with achievements and happiness."
+  "message": "Dear Roopali,\n\nThank you for every contribution you made throughout our journey together. Your willingness to support whenever required never went unnoticed. Wishing you a future filled with achievements and happiness."
 },
 {
   "id": 19,
@@ -274,7 +274,7 @@
   "role": "Technical Trainer",
   "search": ["kanishka ", "python"],
   "short": "Every interaction added another memory to this journey.",
-  "message": "Dear Varun,\n\nThank you for being a part of my Intellipaat journey. Every conversation and every interaction added another wonderful memory. I appreciate your support and professionalism. Wishing you endless growth, happiness and success."
+  "message": "Dear Kanishka,\n\nThank you for being a part of my Intellipaat journey. Every conversation and every interaction added another wonderful memory. I appreciate your support and professionalism. Wishing you endless growth, happiness and success."
 },
 {
   "id": 23,
@@ -292,7 +292,7 @@
   "role": "Technical Trainer",
   "search": ["kirus", "python", "new joiner"],
   "short": "Our journey was short, but I'm glad our paths crossed.",
-  "message": "Dear Keerav,\n\nEven though you recently joined and we didn't get much time to work together, I'm really happy that our paths crossed. I hope you enjoy this journey, continue learning and make the most of every opportunity. Wishing you a wonderful future."
+  "message": "Dear Kirus,\n\nEven though you recently joined and we didn't get much time to work together, I'm really happy that our paths crossed. I hope you enjoy this journey, continue learning and make the most of every opportunity. Wishing you a wonderful future."
 },
 {
   "id": 25,
@@ -303,15 +303,7 @@
   "short": "A new beginning always brings new opportunities.",
   "message": "Dear Sanket,\n\nOur professional journey together was short, but I genuinely enjoyed whatever interactions we had. I hope Intellipaat gives you the same opportunities to learn and grow that it gave me. Wishing you a successful career ahead."
 },
-{
-  "id": 26,
-  "name": "Kanishk",
-  "team": "Python",
-  "role": "Technical Trainer",
-  "search": ["kanishk", "python"],
-  "short": "Keep learning, keep growing and keep smiling.",
-  "message": "Dear Kanishk,\n\nThank you for being a part of this journey. Even though we didn't interact a lot, every interaction reflected your sincerity and willingness to learn. I wish you lots of success and happiness for everything that lies ahead."
-},
+
 {
   "id": 27,
   "name": "Vaibhav",
@@ -430,7 +422,7 @@
     "vnit"
   ],
   "short": "Thank you for always helping whenever VNIT needed attention.",
-  "message": "Dear Bibhash,\n\nThank you for every bit of support, especially while handling VNIT. Whenever I reached out, you always responded immediately and helped without hesitation. I genuinely appreciate your dedication and your willingness to support whenever required. Wishing you great success in everything ahead."
+  "message": "Dear Bibhash,\n\nThank you for every bit of support, especially while handling VNIT, IIT Jammu and NIT Sikkim. Whenever I reached out, you always responded immediately and helped without hesitation. I genuinely appreciate your dedication and your willingness to support whenever required. Wishing you great success in everything ahead."
 },
 {
   "id": 38,
@@ -483,7 +475,7 @@
 },
 {
   "id": 42,
-  "name": "Aditya (DLM)",
+  "name": "Aditya",
   "team": "DLM",
   "role": "DLM Team",
   "search": [
@@ -491,7 +483,7 @@
     "dlm"
   ],
   "short": "Thank you for being supportive throughout our interactions.",
-  "message": "Dear Aditya,\n\nThank you for every interaction we shared during my journey at Intellipaat. Although we were part of different responsibilities, you were always supportive whenever needed. I genuinely appreciate it. Wishing you a wonderful career ahead."
+  "message": "Dear Aditya,\n\nThank you for every interaction we shared during my journey at Intellipaat especially a word "Baba". Although we were part of different responsibilities, you were always supportive whenever needed. I genuinely appreciate it. Wishing you a wonderful career ahead."
 },
 {
   "id": 43,
@@ -532,7 +524,7 @@
 {
   "id": 46,
   "name": "Burhan",
-  "team": "Technical Team",
+  "team": "Escalation's Team",
   "role": "Colleague",
   "search": [
     "burhan"
@@ -543,7 +535,7 @@
 {
   "id": 47,
   "name": "Samarth",
-  "team": "Technical Team",
+  "team": "Escalation's Team",
   "role": "Colleague",
   "search": [
     "samarth"
@@ -554,7 +546,7 @@
 {
   "id": 48,
   "name": "Pradeep",
-  "team": "Technical Team",
+  "team": "Escalation's Team",
   "role": "Colleague",
   "search": [
     "pradeep"
@@ -565,7 +557,7 @@
 {
   "id": 49,
   "name": "Anand Ji",
-  "team": "Technical Team",
+  "team": "Escalation's Team",
   "role": "Colleague",
   "search": [
     "anand"
@@ -576,7 +568,7 @@
 {
   "id": 50,
   "name": "Madhu Di",
-  "team": "Technical Team",
+  "team": "DLM Team",
   "role": "Colleague",
   "search": [
     "madhu"
