@@ -305,7 +305,7 @@
 },
 
 {
-  "id": 27,
+  "id": 26,
   "name": "Vaibhav",
   "team": "Python",
   "role": "Technical Trainer",
@@ -314,7 +314,7 @@
   "message": "Dear Vaibhav,\n\nThank you for being a part of my journey. I hope this is only the beginning of many wonderful achievements in your career. Continue learning, keep believing in yourself and never stop growing. Wishing you all the very best."
 },
 {
-  "id": 28,
+  "id": 27,
   "name": "Jatin",
   "team": "Python",
   "role": "Technical Trainer",
@@ -323,7 +323,7 @@
   "message": "Dear Jatin,\n\nAlthough our interactions were limited, I'm grateful for every opportunity we had to work together. Thank you for being supportive and cooperative. I wish you a career filled with success, happiness and continuous learning."
 },
 {
-  "id": 29,
+  "id": 28,
   "name": "Pranav",
   "team": "Technical Team",
   "role": "Colleague",
@@ -332,7 +332,7 @@
   "message": "Dear Pranav,\n\nYou deserve a special mention because even though we weren't working together directly every day, I always enjoyed our conversations and interactions. Thank you for being such a wonderful person. I truly appreciate every memory we created. Wishing you nothing but happiness and success."
 },
 {
-  "id": 30,
+  "id": 29,
   "name": "Mansi Di",
   "team": "Content Team",
   "role": "Content",
@@ -341,7 +341,7 @@
   "message": "Dear Mansi Di,\n\nAlthough we belonged to different teams, every interaction with you was always warm and pleasant. Thank you for always being so kind and supportive. Wishing you continued success and happiness in everything you do."
 },
 {
-  "id": 31,
+  "id": 30,
   "name": "Garvita",
   "team": "Content Team",
   "role": "Content",
@@ -350,7 +350,7 @@
   "message": "Dear Garvita,\n\nThank you for being a part of my Intellipaat journey. Every interaction, no matter how small, added another positive memory. Wishing you endless success, happiness and wonderful opportunities ahead."
 },
 {
-  "id": 32,
+  "id": 31,
   "name": "Jiya",
   "team": "Content Team",
   "role": "Content",
@@ -360,7 +360,7 @@
 }
   ,
 {
-  "id": 33,
+  "id": 32,
   "name": "Deepak Sir",
   "team": "Operations",
   "role": "Operations Lead",
@@ -374,7 +374,7 @@
   "message": "Dear Deepak Sir,\n\nThank you for always being there whenever I needed guidance. It was never just about sessions or operations; I learned many valuable professional lessons simply by observing the way you handled situations. Your calmness, experience and willingness to help made many difficult moments much easier. Thank you for every lesson, every suggestion and every opportunity to learn. Wishing you continued success and happiness."
 },
 {
-  "id": 34,
+  "id": 33,
   "name": "Benzy Bhaiya",
   "team": "Operations",
   "role": "Operations",
@@ -388,7 +388,7 @@
   "message": "Dear Benzy Bhaiya,\n\nIf there is one thing I will always remember, it is that no matter what time it was—morning, evening or even during a live session—you were always ready to help. Whenever I reached out, you never hesitated. Thank you for always rescuing us whenever we got stuck. Your support has been invaluable throughout my journey. Thank you for everything, Bhaiya."
 },
 {
-  "id": 35,
+  "id": 34,
   "name": "Aman Bhaiya",
   "team": "Operations",
   "role": "Operations",
@@ -400,7 +400,7 @@
   "message": "Dear Aman Bhaiya,\n\nThere's a reason I always called you 'Bhaiya'. The bond we shared was much more than just a professional one. I still remember the countless conversations we had about work, life and so many random things in between. Those memories will always stay with me. Thank you for being such a wonderful person and for always making the workplace feel more like home. I'm truly going to miss our conversations."
 },
 {
-  "id": 36,
+  "id": 35,
   "name": "Gopi Bhaiya",
   "team": "Operations",
   "role": "Operations",
@@ -412,7 +412,7 @@
   "message": "Dear Gopi Bhaiya,\n\nYou are honestly one of the sweetest, kindest and most humble people I have ever met. Every time I came to you for help, you never refused. Your calm nature and genuine willingness to support everyone made a huge difference. Thank you for always being there. Stay exactly the way you are because people like you are truly rare."
 },
 {
-  "id": 37,
+  "id": 36,
   "name": "Bibhash",
   "team": "Operations",
   "role": "Operations",
@@ -425,7 +425,7 @@
   "message": "Dear Bibhash,\n\nThank you for every bit of support, especially while handling VNIT, IIT Jammu and NIT Sikkim. Whenever I reached out, you always responded immediately and helped without hesitation. I genuinely appreciate your dedication and your willingness to support whenever required. Wishing you great success in everything ahead."
 },
 {
-  "id": 38,
+  "id": 37,
   "name": "Sorabh",
   "team": "Operations",
   "role": "Operations",
@@ -437,7 +437,7 @@
   "message": "Dear Sorabh,\n\nThank you for all your support throughout my journey. Every time I approached you, you were always willing to help. I truly appreciate your cooperation and professionalism. Wishing you continued success and happiness."
 },
 {
-  "id": 39,
+  "id": 38,
   "name": "Mihir",
   "team": "Operations",
   "role": "Operations",
@@ -449,7 +449,7 @@
   "message": "Dear Mihir,\n\nAlthough we didn't work together extensively, I still wanted to thank you for every interaction we shared. Every small contribution and every conversation became a part of my journey. Wishing you all the very best for your future."
 },
 {
-  "id": 40,
+  "id": 39,
   "name": "Entire Operations Team",
   "team": "Operations",
   "role": "Team",
@@ -462,7 +462,7 @@
 }
   ,
 {
-  "id": 41,
+  "id": 40,
   "name": "Mahesh Sir",
   "team": "DLM",
   "role": "DLM Team",
@@ -474,7 +474,7 @@
   "message": "Dear Mahesh Sir,\n\nAlthough we worked together only on certain occasions, every interaction with you was always positive. Thank you for all your support and cooperation whenever our paths crossed. I truly appreciate your professionalism and kindness. Wishing you continued success in everything you do."
 },
 {
-  "id": 42,
+  "id": 41,
   "name": "Aditya",
   "team": "DLM",
   "role": "DLM Team",
@@ -486,7 +486,7 @@
   "message": "Dear Aditya,\n\nThank you for every interaction we shared during my journey at Intellipaat especially a word "Baba". Although we were part of different responsibilities, you were always supportive whenever needed. I genuinely appreciate it. Wishing you a wonderful career ahead."
 },
 {
-  "id": 43,
+  "id": 42,
   "name": "Shrimati Ma'am",
   "team": "DLM",
   "role": "DLM Team",
@@ -498,7 +498,7 @@
   "message": "Dear Shrimati Ma'am,\n\nIt was truly wonderful interacting with you throughout my journey. Thank you for your kindness, support and professionalism. Wishing you lots of happiness, good health and success."
 },
 {
-  "id": 44,
+  "id": 43,
   "name": "Rita Ma'am",
   "team": "DLM",
   "role": "DLM Team",
@@ -510,7 +510,7 @@
   "message": "Dear Rita Ma'am,\n\nThank you for every interaction we shared. Your warmth and professionalism always made communication pleasant. I sincerely appreciate your support throughout my journey. Wishing you all the very best."
 },
 {
-  "id": 45,
+  "id": 44,
   "name": "Brinda Ma'am",
   "team": "DLM",
   "role": "DLM Team",
@@ -522,7 +522,7 @@
   "message": "Dear Brinda Ma'am,\n\nAlthough we didn't work together every day, every interaction with you was meaningful. Thank you for your support and cooperation. I wish you continued success and happiness."
 },
 {
-  "id": 46,
+  "id": 45,
   "name": "Burhan",
   "team": "Escalation's Team",
   "role": "Colleague",
@@ -533,7 +533,7 @@
   "message": "Dear Burhan,\n\nThank you for being a wonderful colleague throughout my journey. Every interaction with you was always positive and helpful. I truly appreciate your support and wish you all the very best for everything ahead."
 },
 {
-  "id": 47,
+  "id": 46,
   "name": "Samarth",
   "team": "Escalation's Team",
   "role": "Colleague",
@@ -544,7 +544,7 @@
   "message": "Dear Samarth,\n\nThank you for every interaction, every conversation and every contribution throughout this journey. It was wonderful working alongside you. Wishing you endless success and happiness."
 },
 {
-  "id": 48,
+  "id": 47,
   "name": "Pradeep",
   "team": "Escalation's Team",
   "role": "Colleague",
@@ -555,7 +555,7 @@
   "message": "Dear Pradeep,\n\nThank you for every interaction and every moment we shared while working together. Every person contributes something valuable to our journey, and you certainly did. Wishing you all the very best."
 },
 {
-  "id": 49,
+  "id": 48,
   "name": "Anand Ji",
   "team": "Escalation's Team",
   "role": "Colleague",
@@ -566,7 +566,7 @@
   "message": "Dear Anand Ji,\n\nOne thing I will always remember about you is the respect with which you addressed everyone. Whether someone was a junior or a senior, you always spoke with kindness and humility. That quality makes you truly special. Thank you for being such a wonderful human being. Stay exactly the way you are."
 },
 {
-  "id": 50,
+  "id": 49,
   "name": "Madhu Di",
   "team": "DLM Team",
   "role": "Colleague",
@@ -578,7 +578,7 @@
 }
   ,
 {
-  "id": 51,
+  "id": 50,
   "name": "Vijay Sir",
   "team": "IT Support",
   "role": "IT",
@@ -592,7 +592,7 @@
   "message": "Dear Vijay Sir,\n\nThank you for always helping us whenever we needed any IT support. Whether it was resetting passwords, fixing mail IDs or resolving technical issues, you were always there to help us with a smile. Thank you for making our work easier every single time. Wishing you continued success and happiness."
 },
 {
-  "id": 52,
+  "id": 51,
   "name": "Puneet Bhaiya",
   "team": "IT Support",
   "role": "IT",
@@ -606,7 +606,7 @@
   "message": "Dear Puneet Bhaiya,\n\nThank you for always helping us with laptops, hardware issues and every technical problem that came our way. Your support often went unnoticed because everything simply started working again after you fixed it. Thank you for always being there whenever we needed help."
 },
 {
-  "id": 53,
+  "id": 52,
   "name": "MIS Team",
   "team": "MIS",
   "role": "Support Team",
@@ -618,7 +618,7 @@
   "message": "Dear MIS Team,\n\nWhenever I reached out regarding reports, data or any support, you were always ready to help. Although we didn't interact every day, every interaction reflected your professionalism and willingness to support. Thank you for being an important part of my journey. Wishing the entire team continued success."
 },
 {
-  "id": 54,
+  "id": 53,
   "name": "Placement Team",
   "team": "Placement",
   "role": "Support Team",
@@ -629,7 +629,7 @@
   "message": "Dear Placement Team,\n\nAlthough our interactions were limited, every conversation was always pleasant and professional. Thank you for all your support and cooperation. Wishing the entire team success and happiness in the years to come."
 },
 {
-  "id": 55,
+  "id": 54,
   "name": "HR Team",
   "team": "Human Resources",
   "role": "Support Team",
@@ -641,7 +641,7 @@
   "message": "Dear HR Team,\n\nFrom my joining formalities to every HR-related interaction during my journey, thank you for always being supportive and approachable. Every organization grows because of the people working behind the scenes, and you all have been an important part of my journey. Thank you for everything."
 },
 {
-  "id": 56,
+  "id": 55,
   "name": "A Final Goodbye",
   "team": "Everyone",
   "role": "Closing Message",
