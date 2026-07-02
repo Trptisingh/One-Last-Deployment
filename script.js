@@ -5,7 +5,7 @@
 
 let messages = [];
 let currentPerson = null;
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzyKE6OyPiKWxLOJJRV_WvtZY2T_PFSPTibbp-sQDNvZVq0YdgyazCG0YQ-Coczb3-I/exec";
+const WEB_APP_URL = "https://script.google.com/macros/library/d/1BnY0fiTja5rqrWTF3llyUDEuSzy95I01jnkbVClxg-e7zqfWlfb0ZIcp/2";
 
 /* ===========================================================
    DOM ELEMENTS
