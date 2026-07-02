@@ -238,24 +238,18 @@ async function sendReply() {
 
     status.innerHTML = "Sending...";
 
+    const formData = new FormData();
+
+    formData.append("replyTo", currentPerson.name);
+    formData.append("sender", sender);
+    formData.append("message", message);
+
     try {
 
-        const response = await fetch(WEB_APP_URL, {
+        await fetch(WEB_APP_URL, {
             method: "POST",
-            redirect: "follow",
-            headers: {
-                "Content-Type": "text/plain;charset=utf-8"
-            },
-            body: JSON.stringify({
-                replyTo: currentPerson.name,
-                sender: sender,
-                message: message
-            })
+            body: formData
         });
-
-        const text = await response.text();
-
-        console.log("Apps Script Response:", text);
 
         status.innerHTML = "❤️ Thank you! Your message has been sent.";
 
@@ -265,8 +259,7 @@ async function sendReply() {
     } catch (err) {
 
         console.error(err);
-
-        status.innerHTML = "❌ " + err.message;
+        status.innerHTML = "Unable to send message.";
 
     }
 
