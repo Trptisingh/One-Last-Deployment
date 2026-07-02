@@ -165,46 +165,50 @@ function renderCards(data){
 
 function openMessage(person){
 
-    modalTitle.innerHTML=`
+    if(!person) return;
 
+    modalTitle.innerHTML = `
         ${person.name}
-
         <br>
-
         <small>${person.team}</small>
-
     `;
 
-    modalBody.innerHTML=`
+    modalBody.innerHTML = person.message
+        ? person.message.replace(/\n/g,"<br><br>")
+        : "Message not available.";
 
-        <p>${person.message.replace(/\n/g,"<br><br>")}</p>
-
-    `;
-
-    modal.style.display="flex";
+    modal.classList.add("show");
 
 }
-
 /* ===========================================================
    CLOSE MODAL
 =========================================================== */
 
-closeModal.onclick=()=>{
+closeModal.addEventListener("click",()=>{
 
-    modal.style.display="none";
+    modal.classList.remove("show");
 
-};
+});
 
-window.onclick=(e)=>{
+window.addEventListener("click",(e)=>{
 
     if(e.target===modal){
 
-        modal.style.display="none";
+        modal.classList.remove("show");
 
     }
 
-};
+});
 
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key==="Escape"){
+
+        modal.classList.remove("show");
+
+    }
+
+});
 /* ===========================================================
    SEARCH
 =========================================================== */
