@@ -447,59 +447,37 @@ function animateCards(){
 
 }
 
-/* ===========================================================
-   MILESTONE COUNTER
-=========================================================== */
-
-const counters=document.querySelectorAll(".counter");
-
-const counterObserver=new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(!entry.isIntersecting) return;
-
-        const counter=entry.target;
-
-        const target=Number(counter.dataset.target);
-
-        let current=0;
-
-        const increment=Math.max(1,Math.ceil(target/120));
-
-        function update(){
-
-            current+=increment;
-
-            if(current<target){
-
-                counter.textContent=current.toLocaleString();
-
-                requestAnimationFrame(update);
-
-            }else{
-
-                counter.textContent=target.toLocaleString();
-
+/* ===========================================
+   MILESTONE COUNTERS (fixed)
+=========================================== */
+const counters = document.querySelectorAll(".counter");
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = Number(counter.dataset.target);
+            let current = 0;
+            const increment = Math.max(1, Math.ceil(target / 120));
+            function update() {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = current.toLocaleString();
+                    requestAnimationFrame(update);
+                } else {
+                    counter.textContent = target.toLocaleString();
+                }
             }
-
+            update();
+            counterObserver.unobserve(counter);
         }
-
-        update();
-
-        counterObserver.unobserve(counter);
-
     });
-
-},{
-    threshold:.4
+}, {
+    threshold: 0.4
 });
-
-counters.forEach(counter=>{
-
+counters.forEach(counter => {
     counterObserver.observe(counter);
-
 });
+
 
 /* ===========================================================
    EASTER EGG
