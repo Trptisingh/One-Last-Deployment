@@ -965,13 +965,13 @@ section h2{
 
 #modalBody{
 
-    margin-top:25px;
+    margin-top:20px;
 
-    line-height:2;
+    font-size:20px;
 
-    font-size:18px;
+    line-height:1.8;
 
-    color:#d1d5db;
+    color:#d6d6d6;
 
 }
 .modal{
@@ -1036,15 +1036,6 @@ section h2{
 
 }
 
-#modalBody{
-
-    margin-top:25px;
-
-    line-height:1.9;
-
-    color:#d6d6d6;
-
-}
 
 /* ======================================================
    FINAL SECTION
