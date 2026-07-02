@@ -1191,6 +1191,90 @@ footer p{
     transform:scale(1);
 
 }
+.reply-section{
+
+margin-top:40px;
+
+padding-top:30px;
+
+border-top:1px solid rgba(255,255,255,.1);
+
+}
+
+.reply-section h3{
+
+margin-bottom:20px;
+
+}
+
+.reply-section input,
+.reply-section textarea{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:15px;
+
+background:#111827;
+
+border:1px solid #374151;
+
+color:white;
+
+border-radius:12px;
+
+font-size:16px;
+
+}
+
+.reply-section textarea{
+
+height:140px;
+
+resize:vertical;
+
+}
+
+#sendReply{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:#6C63FF;
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#sendReply:hover{
+
+background:#5848ff;
+
+}
+
+#replyStatus{
+
+margin-top:15px;
+
+font-weight:600;
+
+color:#64ffda;
+
+}
 
 /* ======================================================
    BUTTONS
