@@ -1313,6 +1313,42 @@ padding:40px 20px;
     background:rgba(108,99,255,.12);
 
 }
+#milestones{
+    padding:90px 8%;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:50px;
+}
+
+.stat-card{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+    transition:.35s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-card h3{
+    font-size:52px;
+    color:#64ffda;
+    margin-bottom:15px;
+    font-weight:800;
+}
+
+.stat-card p{
+    font-size:17px;
+    color:#d1d5db;
+}
 
 /* ======================================================
    END
