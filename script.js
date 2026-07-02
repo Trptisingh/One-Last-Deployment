@@ -1,26 +1,84 @@
-/* ==========================================================
+/* ===========================================================
    ONE LAST DEPLOYMENT
-   Created for Tripti Singh
-========================================================== */
+   Tripti Singh
+=========================================================== */
 
-let allMessages = [];
+let messages = [];
 
+/* ===========================================================
+   DOM ELEMENTS
+=========================================================== */
+
+const terminal = document.getElementById("terminalText");
 const searchInput = document.getElementById("searchInput");
 const suggestions = document.getElementById("suggestions");
-const messageContainer = document.getElementById("messageContainer");
+const container = document.getElementById("messageContainer");
 
 const modal = document.getElementById("messageModal");
 const modalTitle = document.getElementById("modalTitle");
 const modalBody = document.getElementById("modalBody");
 const closeModal = document.getElementById("closeModal");
 
-const terminal = document.getElementById("terminalText");
-
 const startJourney = document.getElementById("startJourney");
 
-/* ==========================================================
+/* ===========================================================
+   TERMINAL TYPING
+=========================================================== */
+
+const terminalLines = [
+"$ whoami",
+"Tripti Singh",
+"",
+"$ role",
+"UI/UX Designer",
+"↓",
+"Cloud Trainer",
+"↓",
+"DevOps Team Lead",
+"",
+"$ status",
+"Preparing One Last Deployment...",
+"",
+"$ goodbye",
+"Thank You Intellipaat ❤️"
+];
+
+let terminalIndex = 0;
+let characterIndex = 0;
+
+function typeTerminal(){
+
+    if(terminalIndex >= terminalLines.length) return;
+
+    const line = terminalLines[terminalIndex];
+
+    if(characterIndex < line.length){
+
+        terminal.textContent += line.charAt(characterIndex);
+
+        characterIndex++;
+
+        setTimeout(typeTerminal,40);
+
+    }else{
+
+        terminal.textContent += "\n";
+
+        terminalIndex++;
+
+        characterIndex=0;
+
+        setTimeout(typeTerminal,250);
+
+    }
+
+}
+
+typeTerminal();
+
+/* ===========================================================
    LOAD JSON
-========================================================== */
+=========================================================== */
 
 async function loadMessages(){
 
@@ -28,171 +86,110 @@ async function loadMessages(){
 
         const response = await fetch("messages.json");
 
-        allMessages = await response.json();
+        messages = await response.json();
 
-        renderCards(allMessages);
+        renderCards(messages);
 
-    }
+    }catch(err){
 
-    catch(error){
+        console.error(err);
 
-        console.error(error);
+        container.innerHTML=`
+            <div class="glass">
+                <h2>Unable to load appreciation messages.</h2>
+                <p>Please check messages.json</p>
+            </div>
+        `;
 
     }
 
 }
 
 loadMessages();
+/* ===========================================================
+   RENDER CARDS
+=========================================================== */
 
-/* ==========================================================
-   TERMINAL ANIMATION
-========================================================== */
+function renderCards(data){
 
-const terminalLines = [
+    container.innerHTML="";
 
-"$ git clone intellipaat",
+    if(data.length===0){
 
-"Receiving Objects...",
+        container.innerHTML=`
+            <div class="glass center">
+                <h3>No Results Found 😔</h3>
+                <p>Try searching using another name or team.</p>
+            </div>
+        `;
 
-"Building Memories...",
-
-"Learning UI/UX...",
-
-"Installing DevOps...",
-
-"Configuring AWS...",
-
-"Mentoring Team...",
-
-"Final Deployment Successful ❤️"
-
-];
-
-let currentLine = 0;
-
-function typeTerminal(){
-
-    if(currentLine >= terminalLines.length){
+        updateCardCount();
 
         return;
 
     }
 
-    let line = terminalLines[currentLine];
-
-    let i = 0;
-
-    const p = document.createElement("div");
-
-    terminal.appendChild(p);
-
-    function typing(){
-
-        if(i < line.length){
-
-            p.innerHTML += line.charAt(i);
-
-            i++;
-
-            setTimeout(typing,35);
-
-        }
-
-        else{
-
-            currentLine++;
-
-            setTimeout(typeTerminal,450);
-
-        }
-
-    }
-
-    typing();
-
-}
-
-window.addEventListener("load",()=>{
-
-    terminal.innerHTML="";
-
-    typeTerminal();
-
-});
-
-/* ==========================================================
-   CREATE MESSAGE CARDS
-========================================================== */
-
-function renderCards(data){
-
-    messageContainer.innerHTML="";
-
     data.forEach(person=>{
 
         const card=document.createElement("div");
 
-        card.className="message-card fade-up";
+        card.className="card";
 
         card.innerHTML=`
 
+            <span>${person.team}</span>
+
             <h3>${person.name}</h3>
 
-            <h4>${person.team}</h4>
+            <h4>${person.role}</h4>
 
-            <p>
+            <p>${person.short}</p>
 
-                ${person.short}
-
-            </p>
-
-            <div class="read-btn">
-
-                Read Message →
-
-            </div>
+            <button>Read Message ❤️</button>
 
         `;
 
-        card.onclick=()=>{
+        card.addEventListener("click",()=>openMessage(person));
 
-            openMessage(person);
-
-        };
-
-        messageContainer.appendChild(card);
+        container.appendChild(card);
 
     });
 
+    updateCardCount();
+
+    animateCards();
+
 }
 
-/* ==========================================================
-   MODAL
-========================================================== */
+/* ===========================================================
+   OPEN MESSAGE
+=========================================================== */
 
 function openMessage(person){
 
-    modal.style.display="flex";
+    modalTitle.innerHTML=`
 
-    modalTitle.innerHTML=person.name;
+        ${person.name}
 
-    modalBody.innerHTML=`
+        <br>
 
-        <h3 style="color:#00d4ff;margin-bottom:20px;">
-
-            ${person.team}
-
-        </h3>
-
-        <p>
-
-            ${person.message}
-
-        </p>
+        <small>${person.team}</small>
 
     `;
 
+    modalBody.innerHTML=`
+
+        <p>${person.message.replace(/\n/g,"<br><br>")}</p>
+
+    `;
+
+    modal.style.display="flex";
+
 }
+
+/* ===========================================================
+   CLOSE MODAL
+=========================================================== */
 
 closeModal.onclick=()=>{
 
@@ -209,90 +206,60 @@ window.onclick=(e)=>{
     }
 
 };
-/* ==========================================================
-   LIVE SEARCH
-========================================================== */
 
-searchInput.addEventListener("input", function () {
+/* ===========================================================
+   SEARCH
+=========================================================== */
 
-    const keyword = this.value.toLowerCase().trim();
+searchInput.addEventListener("input",()=>{
 
-    if (keyword === "") {
+    const value=searchInput.value.trim().toLowerCase();
 
-        suggestions.innerHTML = "";
+    suggestions.innerHTML="";
 
-        renderCards(allMessages);
+    if(value===""){
+
+        renderCards(messages);
 
         return;
 
     }
 
-    const results = allMessages.filter(person => {
+    const filtered=messages.filter(item=>{
 
-        const name = person.name.toLowerCase();
+        const searchText=[
 
-        const team = person.team.toLowerCase();
+            item.name,
 
-        const short = person.short.toLowerCase();
+            item.team,
 
-        const search = (person.search || []).join(" ").toLowerCase();
+            item.role,
 
-        return (
-            name.includes(keyword) ||
-            team.includes(keyword) ||
-            short.includes(keyword) ||
-            search.includes(keyword)
-        );
+            ...(item.search||[])
+
+        ].join(" ").toLowerCase();
+
+        return searchText.includes(value);
 
     });
 
-    renderSuggestions(results);
+    renderCards(filtered);
 
-    renderCards(results);
+    filtered.slice(0,5).forEach(item=>{
 
-});
+        const div=document.createElement("div");
 
-/* ==========================================================
-   SEARCH SUGGESTIONS
-========================================================== */
+        div.className="suggestion";
 
-function renderSuggestions(results){
+        div.textContent=`${item.name} • ${item.team}`;
 
-    suggestions.innerHTML = "";
+        div.onclick=()=>{
 
-    if(results.length === 0){
+            searchInput.value=item.name;
 
-        suggestions.innerHTML = `
-            <div class="search-result">
-                <h3>No Results Found 😔</h3>
-                <p>Try another name or team.</p>
-            </div>
-        `;
+            suggestions.innerHTML="";
 
-        return;
-
-    }
-
-    results.slice(0,6).forEach(person=>{
-
-        const div = document.createElement("div");
-
-        div.className = "search-result";
-
-        div.innerHTML = `
-            <h3>${person.name}</h3>
-            <p>${person.team}</p>
-        `;
-
-        div.onclick = () => {
-
-            searchInput.value = person.name;
-
-            suggestions.innerHTML = "";
-
-            renderCards([person]);
-
-            openMessage(person);
+            renderCards([item]);
 
         };
 
@@ -300,29 +267,42 @@ function renderSuggestions(results){
 
     });
 
+});
+/* ===========================================================
+   BEGIN JOURNEY BUTTON
+=========================================================== */
+
+if(startJourney){
+
+    startJourney.addEventListener("click",()=>{
+
+        const story=document.getElementById("story");
+
+        if(story){
+
+            story.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
+
 }
 
-/* ==========================================================
-   BEGIN JOURNEY BUTTON
-========================================================== */
+/* ===========================================================
+   SCROLL REVEAL ANIMATION
+=========================================================== */
 
-startJourney.addEventListener("click",()=>{
+const revealElements=document.querySelectorAll(
 
-    document
-        .getElementById("story")
-        .scrollIntoView({
+    "section,.step,.card,.glass,.stat-card"
 
-            behavior:"smooth"
+);
 
-        });
-
-});
-
-/* ==========================================================
-   SCROLL REVEAL
-========================================================== */
-
-const observer = new IntersectionObserver(entries=>{
+const revealObserver=new IntersectionObserver((entries)=>{
 
     entries.forEach(entry=>{
 
@@ -335,42 +315,210 @@ const observer = new IntersectionObserver(entries=>{
     });
 
 },{
+
     threshold:.15
+
 });
 
-function observeElements(){
+revealElements.forEach(el=>{
 
-    document
-        .querySelectorAll(
-            ".fade-up,.fade-left,.fade-right,.zoom"
-        )
-        .forEach(item=>{
+    el.classList.add("hidden");
 
-            observer.observe(item);
+    revealObserver.observe(el);
 
-        });
+});
 
-}
+/* ===========================================================
+   ACTIVE NAVBAR
+=========================================================== */
 
-window.addEventListener("load",observeElements);
+const sections=document.querySelectorAll("section");
 
-/* ==========================================================
-   ESC KEY CLOSE MODAL
-========================================================== */
+const navLinks=document.querySelectorAll("nav a");
 
-document.addEventListener("keydown",(e)=>{
+window.addEventListener("scroll",()=>{
 
-    if(e.key==="Escape"){
+    let current="";
 
-        modal.style.display="none";
+    sections.forEach(section=>{
+
+        const top=section.offsetTop-150;
+
+        if(window.scrollY>=top){
+
+            current=section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach(link=>{
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href")==="#"+current){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+/* ===========================================================
+   PARALLAX BACKGROUND
+=========================================================== */
+
+window.addEventListener("scroll",()=>{
+
+    const bg=document.querySelector(".background");
+
+    if(bg){
+
+        bg.style.transform=`translateY(${window.scrollY*0.15}px)`;
 
     }
 
 });
 
-/* ==========================================================
-   AUTO CLOSE SEARCH AFTER CLICK
-========================================================== */
+/* ===========================================================
+   FLOATING ICON EFFECT
+=========================================================== */
+
+document.querySelectorAll(".float-icon").forEach((icon,index)=>{
+
+    icon.style.animationDelay=`${index*1.2}s`;
+
+});
+/* ===========================================================
+   CARD COUNT
+=========================================================== */
+
+function updateCardCount(){
+
+    let counter=document.getElementById("cardCounter");
+
+    if(!counter){
+
+        counter=document.createElement("p");
+
+        counter.id="cardCounter";
+
+        counter.className="center mb40";
+
+        const section=document.getElementById("messages");
+
+        const title=section.querySelector("h2");
+
+        title.insertAdjacentElement("afterend",counter);
+
+    }
+
+    counter.innerHTML=`Showing <strong>${container.children.length}</strong> Appreciation Message${container.children.length===1?"":"s"} ❤️`;
+
+}
+
+/* ===========================================================
+   CARD ANIMATION
+=========================================================== */
+
+function animateCards(){
+
+    const cards=document.querySelectorAll(".card");
+
+    cards.forEach((card,index)=>{
+
+        card.style.opacity="0";
+
+        card.style.transform="translateY(25px)";
+
+        card.style.transition="all .5s ease";
+
+        setTimeout(()=>{
+
+            card.style.opacity="1";
+
+            card.style.transform="translateY(0)";
+
+        },index*60);
+
+    });
+
+}
+
+/* ===========================================================
+   MILESTONE COUNTER
+=========================================================== */
+
+const counters=document.querySelectorAll(".counter");
+
+const counterObserver=new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(!entry.isIntersecting) return;
+
+        const counter=entry.target;
+
+        const target=Number(counter.dataset.target);
+
+        let current=0;
+
+        const increment=Math.max(1,Math.ceil(target/120));
+
+        function update(){
+
+            current+=increment;
+
+            if(current<target){
+
+                counter.textContent=current.toLocaleString();
+
+                requestAnimationFrame(update);
+
+            }else{
+
+                counter.textContent=target.toLocaleString();
+
+            }
+
+        }
+
+        update();
+
+        counterObserver.unobserve(counter);
+
+    });
+
+},{
+    threshold:.4
+});
+
+counters.forEach(counter=>{
+
+    counterObserver.observe(counter);
+
+});
+
+/* ===========================================================
+   EASTER EGG
+=========================================================== */
+
+searchInput.addEventListener("keydown",(e)=>{
+
+    if(e.key!=="Enter") return;
+
+    if(searchInput.value.trim().toLowerCase()==="devops"){
+
+        alert("❤️ Once a DevOps Engineer, Always a DevOps Engineer ❤️");
+
+    }
+
+});
+/* ===========================================================
+   AUTO CLOSE SUGGESTIONS
+=========================================================== */
 
 document.addEventListener("click",(e)=>{
 
@@ -385,257 +533,58 @@ document.addEventListener("click",(e)=>{
 
 });
 
-/* ==========================================================
-   SCROLL TO TOP WHEN PAGE RELOADS
-========================================================== */
+/* ===========================================================
+   PRESS ESC TO CLOSE MODAL
+=========================================================== */
 
-window.onbeforeunload=()=>{
+document.addEventListener("keydown",(e)=>{
 
-    window.scrollTo(0,0);
+    if(e.key==="Escape"){
 
-};
-/* ==========================================================
-   CARD COUNT
-========================================================== */
-
-function updateCardCount(){
-
-    let counter = document.getElementById("cardCounter");
-
-    if(!counter){
-
-        counter = document.createElement("div");
-
-        counter.id = "cardCounter";
-
-        counter.style.textAlign = "center";
-        counter.style.marginBottom = "30px";
-        counter.style.color = "#8fa4c9";
-        counter.style.fontSize = "18px";
-
-        const section = document.getElementById("messages");
-
-        section.insertBefore(counter, messageContainer);
-
-    }
-
-    counter.innerHTML = `
-        Showing <strong style="color:#00d4ff">
-        ${document.querySelectorAll(".message-card").length}
-        </strong> Appreciation Messages
-    `;
-
-}
-
-/* ==========================================================
-   OVERRIDE RENDER CARDS
-========================================================== */
-
-const oldRenderCards = renderCards;
-
-renderCards = function(data){
-
-    oldRenderCards(data);
-
-    updateCardCount();
-
-}
-
-/* ==========================================================
-   RANDOM CARD ANIMATION
-========================================================== */
-
-function animateCards(){
-
-    const cards = document.querySelectorAll(".message-card");
-
-    cards.forEach((card,index)=>{
-
-        card.style.opacity = "0";
-
-        card.style.transform = "translateY(40px)";
-
-        setTimeout(()=>{
-
-            card.style.transition = ".5s ease";
-
-            card.style.opacity = "1";
-
-            card.style.transform = "translateY(0)";
-
-        },index*70);
-
-    });
-
-}
-
-const originalRender = renderCards;
-
-renderCards = function(data){
-
-    originalRender(data);
-
-    animateCards();
-
-}
-
-/* ==========================================================
-   ACTIVE NAVIGATION
-========================================================== */
-
-const sections = document.querySelectorAll("section");
-
-const navLinks = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll",()=>{
-
-    let current = "";
-
-    sections.forEach(section=>{
-
-        const top = section.offsetTop - 150;
-
-        if(window.scrollY >= top){
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-    navLinks.forEach(link=>{
-
-        link.classList.remove("active");
-
-        if(link.getAttribute("href")==="#" + current){
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
-
-/* ==========================================================
-   SMALL PARALLAX
-========================================================== */
-
-window.addEventListener("scroll",()=>{
-
-    const bg = document.querySelector(".background");
-
-    bg.style.transform =
-    `translateY(${window.scrollY*0.08}px)`;
-
-});
-
-/* ==========================================================
-   FOOTER YEAR
-========================================================== */
-
-const footer = document.querySelector("footer");
-
-const year = new Date().getFullYear();
-
-footer.innerHTML += `
-<p style="margin-top:15px;font-size:14px;color:#6b7fa4;">
-© ${year} • Built with ❤️ by Tripti Singh
-</p>
-`;
-
-/* ==========================================================
-   EASTER EGG
-========================================================== */
-
-let keys = "";
-
-window.addEventListener("keydown",(e)=>{
-
-    keys += e.key.toLowerCase();
-
-    if(keys.length > 15){
-
-        keys = keys.slice(-15);
-
-    }
-
-    if(keys.includes("devops")){
-
-        alert(
-`🚀 Deployment Successful!
-
-Thank you for being part of my journey.
-
-❤️
-Tripti Singh`
-        );
-
-        keys = "";
+        modal.style.display="none";
 
     }
 
 });
-const counters = document.querySelectorAll(".counter");
 
-const observer = new IntersectionObserver((entries)=>{
+/* ===========================================================
+   SCROLL TO TOP ON LOGO CLICK
+=========================================================== */
 
-    entries.forEach(entry=>{
+const logo=document.querySelector(".logo");
 
-        if(entry.isIntersecting){
+if(logo){
 
-            const counter = entry.target;
-            const target = +counter.dataset.target;
+    logo.style.cursor="pointer";
 
-            let count = 0;
+    logo.addEventListener("click",()=>{
 
-            const speed = target/100;
+        window.scrollTo({
 
-            const update=()=>{
+            top:0,
 
-                count += speed;
+            behavior:"smooth"
 
-                if(count < target){
-
-                    counter.innerText=Math.floor(count);
-
-                    requestAnimationFrame(update);
-
-                }else{
-
-                    counter.innerText=target.toLocaleString();
-
-                }
-
-            }
-
-            update();
-
-            observer.unobserve(counter);
-
-        }
+        });
 
     });
 
-},{threshold:.4});
+}
 
-counters.forEach(counter=>observer.observe(counter));
+/* ===========================================================
+   CONSOLE MESSAGE ❤️
+=========================================================== */
 
-/* ==========================================================
-   CONSOLE MESSAGE
-========================================================== */
+console.log(`
+========================================================
 
-console.clear();
+        ONE LAST DEPLOYMENT ❤️
 
-console.log("%cOne Last Deployment",
-"font-size:34px;font-weight:bold;color:#6C63FF;");
+        Built by Tripti Singh
 
-console.log("%cDesigned & Developed by Tripti Singh",
-"font-size:18px;color:#00d4ff;");
+        UI/UX → DevOps → Team Lead
 
-console.log("%cThank you Intellipaat ❤️",
-"font-size:16px;color:#81ffcb;");
+        Thank You Intellipaat 🙏
 
-/* ==========================================================
-   END
-========================================================== */
+========================================================
+`);
