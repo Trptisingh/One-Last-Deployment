@@ -855,9 +855,25 @@
   "short": "Thank you for supporting me throughout my journey.",
   "message": "Dear HR Team,\n\nFrom my joining formalities to every HR-related interaction during my journey, thank you for always being supportive and approachable. Every organization grows because of the people working behind the scenes, and you all have been an important part of my journey. Thank you for everything."
 },
+  {
+  "id": 69,
+  "name": "Pantry Staff",
+  "team": "Support Staff",
+  "role": "The Smiles Behind Every Cup",
+  "search": [
+    "tea",
+    "coffee",
+    "pantry",
+    "didi",
+    "support staff",
+    "canteen"
+  ],
+  "short": "The people who quietly made every working day a little warmer and a little brighter.",
+  "message": "Dear Bhaiya and the entire Pantry Staff,\n\nSome of the most important people in an organization are often the ones who work quietly behind the scenes, making everyone else's day a little easier.\n\nWhether it was serving us tea, coffee or simply greeting us with a warm smile every morning, your kindness never went unnoticed. Those small moments during busy workdays often became little breaks that refreshed both our minds and our spirits.\n\nThank you for your hard work, your dedication and the care with which you looked after everyone in the office. Your contribution may not always be visible in meetings or reports, but it has always been an important part of the workplace and the memories I will carry with me.\n\nI sincerely wish you good health, happiness and endless blessings. Thank you for everything you do, and thank you for making Intellipaat feel a little more like home every single day."
+},
   
 {
-  "id": 69,
+  "id": 70,
   "name": "A Final Goodbye",
   "team": "Everyone",
   "role": "Closing Message",
