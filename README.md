@@ -4,7 +4,7 @@
 
 ### *"Every deployment begins with a single command. This one ends with gratitude."*
 
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=3500&pause=1000&color=4F8EF7&center=true&vCenter=true&width=700&lines=A+Farewell+Built+With+Code.;From+UI%2FUX+to+DevOps+Team+Lead.;Every+Memory+Deserves+Its+Own+Deployment." alt="Typing Animation"/>
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=3500&pause=1000&color=4F8EF7&center=true&vCenter=true&width=700&lines=A+Farewell+Built+With+Code.;From+UI%2FUX+to+DevOps+Cloud+Team+Lead.;Every+Memory+Deserves+Its+Own+Deployment." alt="Typing Animation"/>
 
 <br>
 
@@ -31,7 +31,7 @@ Some simplify infrastructure.
 
 > **How do you say thank you to the people who shaped your career?**
 
-Instead of writing a farewell email, I wanted to build something meaningful—something that people could interact with, search through, and hopefully remember.
+Instead of writing a farewell email, I wanted to build something meaningful, something that people could interact with, search through, and hopefully remember.
 
 **One Last Deployment** is my farewell website, created as a tribute to every mentor, teammate, learner, manager, and friend who became part of my journey at **Intellipaat**.
 
@@ -46,10 +46,10 @@ Instead of writing a farewell email, I wanted to build something meaningful—so
 UI/UX Designer
       │
       ▼
-Cloud Engineering
+DevOps
       │
       ▼
-DevOps
+Cloud Engineering
       │
       ▼
 Corporate Trainer
@@ -70,7 +70,7 @@ What started as learning design gradually became a journey through Cloud, DevOps
 
 Every responsibility taught me something beyond technology.
 
-Every challenge built confidence.
+Every challenge built Confidence.
 
 Every person became part of the story this project represents.
 
@@ -118,10 +118,6 @@ This project was created with four simple goals.
 ```text
 One-Last-Deployment/
 │
-├── assets/
-│   ├── favicon.ico
-│   └── images/
-│
 ├── index.html
 ├── style.css
 ├── script.js
@@ -135,9 +131,10 @@ One-Last-Deployment/
 
 Throughout this journey, I had the privilege to contribute through:
 
+- Woking on multiple Projects
 - Training multiple learner batches
 - Conducting one-on-one mentoring sessions
-- Resolving learner escalations and support tickets
+- Resolving learner escalations and tickets
 - Working with prestigious IIT & NIT programs
 - Leading the DevOps team
 - Receiving valuable learner feedback
@@ -182,19 +179,15 @@ It is a snapshot of one of the most meaningful chapters of my professional life.
 
 # Live Website
 
-**GitHub Pages**
+<div align="center">
 
-```
-<YOUR_GITHUB_PAGES_URL>
-```
+## Live Website
 
-Example:
+<a href="https://trptisingh.github.io/One-Last-Deployment/" target="_blank">
+    <img src="https://img.shields.io/badge/Visit-One%20Last%20Deployment-4F8EF7?style=for-the-badge&logo=github" />
+</a>
 
-```
-https://trptisingh.github.io/One-Last-Deployment/
-```
-
----
+</div>
 
 # Final Deployment
 
