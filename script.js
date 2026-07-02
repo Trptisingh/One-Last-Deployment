@@ -124,20 +124,17 @@ function renderCards(data){
         `;
 
         updateCardCount();
-
         return;
-
     }
 
     data.forEach(person=>{
 
         const card=document.createElement("div");
 
-        card.className="card";
+        card.className="message-card";
 
         card.innerHTML=`
-
-            <span>${person.team}</span>
+            <span class="team-badge">${person.team}</span>
 
             <h3>${person.name}</h3>
 
@@ -145,8 +142,9 @@ function renderCards(data){
 
             <p>${person.short}</p>
 
-            <button>Read Message ❤️</button>
-
+            <button class="read-btn">
+                Read Message ❤️
+            </button>
         `;
 
         card.addEventListener("click",()=>openMessage(person));
