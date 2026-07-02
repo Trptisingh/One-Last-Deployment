@@ -220,80 +220,53 @@ function openMessage(person){
         .addEventListener("click", sendReply);
 
 }
-async function sendReply(){
+async function sendReply() {
 
-    const sender=document
-        .getElementById("replyName")
-        .value.trim();
+    const sender = document.getElementById("replyName").value.trim();
+    const message = document.getElementById("replyMessage").value.trim();
+    const status = document.getElementById("replyStatus");
 
-    const message=document
-        .getElementById("replyMessage")
-        .value.trim();
-
-    const status=document
-        .getElementById("replyStatus");
-
-    if(sender===""){
-
-        status.innerHTML="Please enter your name.";
-
+    if (!sender) {
+        status.innerHTML = "Please enter your name.";
         return;
-
     }
 
-    if(message===""){
-
-        status.innerHTML="Please write a message.";
-
+    if (!message) {
+        status.innerHTML = "Please write a message.";
         return;
-
     }
 
-    status.innerHTML="Sending...";
+    status.innerHTML = "Sending...";
 
-    try{
+    try {
 
-        const response=await fetch(WEB_APP_URL,{
-
-            method:"POST",
-
-            headers:{
-                "Content-Type":"application/json"
+        const response = await fetch(WEB_APP_URL, {
+            method: "POST",
+            redirect: "follow",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
             },
-
-            body:JSON.stringify({
-
-                replyTo:currentPerson.name,
-
-                sender:sender,
-
-                message:message
-
+            body: JSON.stringify({
+                replyTo: currentPerson.name,
+                sender: sender,
+                message: message
             })
-
         });
 
-        const data=await response.json();
+        const text = await response.text();
 
-        if(data.status==="success"){
+        console.log("Apps Script Response:", text);
 
-            status.innerHTML="❤️ Thank you! Your message has been sent.";
+        status.innerHTML = "❤️ Thank you! Your message has been sent.";
 
-            document.getElementById("replyName").value="";
+        document.getElementById("replyName").value = "";
+        document.getElementById("replyMessage").value = "";
 
-            document.getElementById("replyMessage").value="";
-
-        }else{
-
-            status.innerHTML="Something went wrong.";
-
-        }
-
-    }catch(err){
+    } catch (err) {
 
         console.error(err);
 
-        status.innerHTML="Unable to send message.";
+        status.innerHTML = "❌ " + err.message;
 
     }
 
