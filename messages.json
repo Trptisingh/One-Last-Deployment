@@ -20,7 +20,7 @@
     "id": 2,
     "name": "Hemant Sir",
     "team": "Technical",
-    "role": "Mentor",
+    "role": "VP",
     "search": [
       "hemant",
       "uiux",
@@ -37,8 +37,8 @@
   {
     "id": 3,
     "name": "Akshay Sir",
-    "team": "Manager",
-    "role": "Team Lead",
+    "team": "Technical",
+    "role": "Manager",
     "search": [
       "akshay",
       "manager",
@@ -56,7 +56,7 @@
     "id": 4,
     "name": "Harshit Bhaiya",
     "team": "Technical",
-    "role": "Senior",
+    "role": "Manager",
     "search": [
       "harshit",
       "operations",
