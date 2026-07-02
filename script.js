@@ -174,8 +174,11 @@ function openMessage(person){
     `;
 
     modalBody.innerHTML = person.message
-        ? person.message.replace(/\n/g,"<br><br>")
-        : "Message not available.";
+        ? `<p>${person.message
+                .trim()
+                .replace(/\n{2,}/g, "</p><p>")
+                .replace(/\n/g, "<br>")}</p>`
+        : "<p>Message not available.</p>";
 
     modal.classList.add("show");
 
