@@ -993,6 +993,17 @@ section h2{
     z-index:9999;
 
 }
+#modalBody p{
+
+    margin:0 0 18px;
+
+}
+
+#modalBody p:last-child{
+
+    margin-bottom:0;
+
+}
 
 .modal.show{
 
