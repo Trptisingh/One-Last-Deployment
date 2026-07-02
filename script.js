@@ -4,6 +4,8 @@
 =========================================================== */
 
 let messages = [];
+let currentPerson = null;
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzyKE6OyPiKWxLOJJRV_WvtZY2T_PFSPTibbp-sQDNvZVq0YdgyazCG0YQ-Coczb3-I/exec";
 
 /* ===========================================================
    DOM ELEMENTS
@@ -167,37 +169,158 @@ function openMessage(person){
 
     if(!person) return;
 
+    currentPerson = person;
+
     modalTitle.innerHTML = `
         ${person.name}
         <br>
         <small>${person.team}</small>
     `;
 
-    modalBody.innerHTML = person.message
-        ? `<p>${person.message
+    modalBody.innerHTML = `
+        <div class="message-content">
+            <p>${person.message
                 .trim()
-                .replace(/\n{2,}/g, "</p><p>")
-                .replace(/\n/g, "<br>")}</p>`
-        : "<p>Message not available.</p>";
+                .replace(/\n{2,}/g,"</p><p>")
+                .replace(/\n/g,"<br>")}</p>
+        </div>
+
+        <hr style="margin:35px 0;border-color:rgba(255,255,255,.08);">
+
+        <div class="reply-section">
+
+            <h3>💙 Leave a Message for Me</h3>
+
+            <input
+                id="replyName"
+                type="text"
+                placeholder="Your Name">
+
+            <textarea
+                id="replyMessage"
+                placeholder="Write something from your heart..."></textarea>
+
+            <button
+                id="sendReply"
+                class="read-btn">
+
+                Send ❤️
+
+            </button>
+
+            <p id="replyStatus"></p>
+
+        </div>
+    `;
 
     modal.classList.add("show");
+
+    document
+        .getElementById("sendReply")
+        .addEventListener("click", sendReply);
+
+}
+async function sendReply(){
+
+    const sender=document
+        .getElementById("replyName")
+        .value.trim();
+
+    const message=document
+        .getElementById("replyMessage")
+        .value.trim();
+
+    const status=document
+        .getElementById("replyStatus");
+
+    if(sender===""){
+
+        status.innerHTML="Please enter your name.";
+
+        return;
+
+    }
+
+    if(message===""){
+
+        status.innerHTML="Please write a message.";
+
+        return;
+
+    }
+
+    status.innerHTML="Sending...";
+
+    try{
+
+        const response=await fetch(WEB_APP_URL,{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+
+                replyTo:currentPerson.name,
+
+                sender:sender,
+
+                message:message
+
+            })
+
+        });
+
+        const data=await response.json();
+
+        if(data.status==="success"){
+
+            status.innerHTML="❤️ Thank you! Your message has been sent.";
+
+            document.getElementById("replyName").value="";
+
+            document.getElementById("replyMessage").value="";
+
+        }else{
+
+            status.innerHTML="Something went wrong.";
+
+        }
+
+    }catch(err){
+
+        console.error(err);
+
+        status.innerHTML="Unable to send message.";
+
+    }
 
 }
 /* ===========================================================
    CLOSE MODAL
 =========================================================== */
 
-closeModal.addEventListener("click",()=>{
+function closeMessageModal(){
 
     modal.classList.remove("show");
 
-});
+    setTimeout(()=>{
+
+        modalBody.innerHTML="";
+
+    },300);
+
+}
+
+closeModal.addEventListener("click", closeMessageModal);
 
 window.addEventListener("click",(e)=>{
 
     if(e.target===modal){
 
-        modal.classList.remove("show");
+        closeMessageModal();
 
     }
 
@@ -207,7 +330,7 @@ document.addEventListener("keydown",(e)=>{
 
     if(e.key==="Escape"){
 
-        modal.classList.remove("show");
+        closeMessageModal();
 
     }
 
