@@ -273,6 +273,7 @@ It is the digital representation of one of the most meaningful chapters of my pr
 </details>
 
 ---
+
 # Live Website
 
 <div align="center">
@@ -287,15 +288,15 @@ The project is hosted on **GitHub Pages**.
 
 </a>
 
+&nbsp;&nbsp;
+
+<a href="https://github.com/Trptisingh/One-Last-Deployment" target="_blank">
+
+<img src="https://img.shields.io/badge/View-Source%20Code-181717?style=for-the-badge&logo=github&logoColor=white"/>
+
+</a>
+
 </div>
-
----
-
-# Repository
-
-Source Code
-
-https://github.com/Trptisingh/One-Last-Deployment
 
 ---
 
