@@ -642,6 +642,55 @@ if(logo){
     });
 
 }
+/* ===========================================================
+   MEMORY GALLERY
+===========================================================*/
+
+const memoryModal=document.getElementById("memoryModal");
+
+const memoryImage=document.getElementById("memoryImage");
+
+const memoryCaption=document.getElementById("memoryCaption");
+
+const memoryClose=document.querySelector(".memory-close");
+
+function openMemory(card){
+
+    const img=card.querySelector("img");
+
+    memoryImage.src=img.dataset.full;
+
+    memoryCaption.innerHTML=card.querySelector("h3").innerHTML;
+
+    memoryModal.classList.add("show");
+
+}
+
+memoryClose.onclick=()=>{
+
+    memoryModal.classList.remove("show");
+
+}
+
+memoryModal.onclick=(e)=>{
+
+    if(e.target===memoryModal){
+
+        memoryModal.classList.remove("show");
+
+    }
+
+}
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key==="Escape"){
+
+        memoryModal.classList.remove("show");
+
+    }
+
+});
 
 /* ===========================================================
    CONSOLE MESSAGE ❤️
